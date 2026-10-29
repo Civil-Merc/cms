@@ -65,17 +65,18 @@ export const initialPages: CmsPage[] = [
     content:
       "<p>CivilMerc delivers practical services for projects that need clear coordination and reliable delivery.</p><ul><li>Project planning</li><li>Site coordination</li><li>Ongoing support</li></ul>",
   },
-  {
-    id: "about",
-    title: "About Us",
-    slug: "about-us",
-    description: "Who CivilMerc is and how the team works.",
-    status: "published",
-    gallery: [],
-    services: [],
-    content:
-      "<h2>About CivilMerc</h2><p>CivilMerc is a team focused on careful work, clear communication, and projects that hold up over time.</p>",
-  },
+  // Temporarily hidden from CMS nav and dashboard — restore to re-enable About Us editing.
+  // {
+  //   id: "about",
+  //   title: "About Us",
+  //   slug: "about-us",
+  //   description: "Who CivilMerc is and how the team works.",
+  //   status: "published",
+  //   gallery: [],
+  //   services: [],
+  //   content:
+  //     "<h2>About CivilMerc</h2><p>CivilMerc is a team focused on careful work, clear communication, and projects that hold up over time.</p>",
+  // },
   {
     id: "projects",
     title: "Projects",

@@ -18,7 +18,6 @@ import {
   LuLogOut,
   LuMail,
   LuMenu,
-  LuUsers,
   LuX,
 } from "react-icons/lu"
 import { AboutEditScreen } from "@/auth/admin/AboutEditScreen"
@@ -37,7 +36,7 @@ const navItems = [{ label: "Dashboard", icon: LuLayoutDashboard }]
 
 const pageIcons: Record<string, typeof LuBriefcase> = {
   services: LuBriefcase,
-  about: LuUsers,
+  // about: LuUsers,
   projects: LuFolderKanban,
   contact: LuMail,
 }
@@ -615,7 +614,7 @@ export function AdminShell({ onSignOut }: { onSignOut: () => void }) {
                 Welcome to the CivilMerc CMS
               </Text>
               <Text fontSize="15px" color="#6b6b6b" lineHeight="1.6" mb={{ base: 5, sm: 6 }}>
-                Manage the public site from here. Edit Services, About Us, Projects, and Contact Us below.
+                Manage the public site from here. Edit Services, Projects, and Contact Us below.
               </Text>
 
               <Box
