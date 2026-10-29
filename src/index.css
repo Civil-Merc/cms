@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@keyframes civilmerc-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cms-editor .ql-toolbar.ql-snow {
+  border: 1px solid #e6e6e6;
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+  background: #f7f7f7;
+}
+
+.cms-editor .ql-container.ql-snow {
+  border: 1px solid #e6e6e6;
+  border-radius: 0 0 10px 10px;
+  background: #fff;
+  min-height: 240px;
+  font-family: Effra, system-ui, sans-serif;
+  font-size: 16px;
+  color: #181818;
+}
+
+.cms-editor .ql-editor {
+  min-height: 240px;
+}
+
+.cms-editor .ql-editor.ql-blank::before {
+  color: #8a8a8a;
+  font-style: normal;
+}
+
+.cms-editor .ql-toolbar button,
+.cms-editor .ql-toolbar .ql-picker-label {
+  border-radius: 8px;
+}
+
+.cms-editor .ql-toolbar button:hover,
+.cms-editor .ql-toolbar button:active,
+.cms-editor .ql-toolbar .ql-picker-label:hover {
+  opacity: 0.6;
+}
+
+.cms-preview h2,
+.cms-editor .ql-editor h2 {
+  font-size: 1.35rem;
+  margin: 0.4em 0 0.45em;
+}
+
+.cms-preview ul,
+.cms-preview ol,
+.cms-editor .ql-editor ul,
+.cms-editor .ql-editor ol {
+  margin: 0 0 0.75em;
+  padding-left: 1.25rem;
+}
+
+.cms-preview img,
+.cms-editor .ql-editor img {
+  max-width: 100%;
+  border-radius: 10px;
+}
