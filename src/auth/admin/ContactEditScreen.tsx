@@ -4,10 +4,10 @@ import { LuArrowLeft, LuPlus, LuTrash2 } from "react-icons/lu"
 import type { ContactPage } from "@/auth/admin/cms-pages"
 import { updateContactPage } from "@/auth/admin/pages-api"
 import { FieldInput } from "@/components/FieldInput"
+import { PageEditorStatusCard } from "@/components/PageEditorStatusCard"
 import { PageStatusBadge } from "@/components/PageStatusBadge"
 import { ProcessingOverlay } from "@/components/ProcessingOverlay"
 import { toaster } from "@/components/ui/toaster"
-import { primaryActionButton } from "@/theme/civilmerc-theme"
 
 type ContactEditScreenProps = {
   page: ContactPage
@@ -141,43 +141,14 @@ export function ContactEditScreen({ page, onChange, onBack }: ContactEditScreenP
   }
 
   const sidebarCards = () => (
-    <Box bg="white" borderWidth="1px" borderColor="#e6e6e6" borderRadius="10px" p={4}>
-      <Text fontSize="12px" fontWeight="700" letterSpacing="0.08em" color="#6b6b6b" mb={3}>
-        STATUS
-      </Text>
-      <Box mb={3}>
-        <PageStatusBadge status={page.status} size="md" />
-      </Box>
-      <Button
-        w="full"
-        h="35px"
-        mb={2}
-        borderRadius="10px"
-        disabled={page.status === "published" || busy}
-        {...primaryActionButton}
-        onClick={publishPage}
-      >
-        Publish
-      </Button>
-      <Button
-        w="full"
-        h="35px"
-        borderRadius="10px"
-        variant="outline"
-        borderColor="#e6e6e6"
-        color="#181818"
-        disabled={!pageDirty || busy}
-        {...dimOnPress}
-        onClick={savePage}
-      >
-        Save page
-      </Button>
-      {pageError ? (
-        <Text mt={3} fontSize="13px" color="#8f2d2d">
-          {pageError}
-        </Text>
-      ) : null}
-    </Box>
+    <PageEditorStatusCard
+      status={page.status}
+      pageDirty={pageDirty}
+      busy={busy}
+      pageError={pageError}
+      onPublish={publishPage}
+      onSave={savePage}
+    />
   )
 
   return (
